@@ -1,0 +1,678 @@
+/**
+ * All of the CSS for "spinining wheel for wordpress and woocommerce" public-facing functionality has been
+ * included in this file.
+ */
+ 
+/*-wheel css -*/
+.spinio .wheel-wrapper {
+  text-align: center;
+}
+.spinio .peg,
+.spinio .wheelSVG {
+  visibility: hidden;
+}
+.spinio .wheelContainer {
+  /*
+ position:absolute;*/
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+.spinio .centerCircle,
+.spinio .valueContainer,
+.spinio .wheelOutline,
+.spinio .wheelText {
+  pointer-events: none;
+}
+.spinio .wheelContainer {
+  text-align: center !important;
+  margin: auto;
+  position: relative;
+  max-width: 650px;
+}
+.spinio .wheelSVG {
+  pointer-events: none;
+  position: absolute;
+  overflow: visible;
+  width: 100%;
+  /*height: 450px;*/
+  margin-top: 0px;
+}
+.spinio .wheelText {
+  text-anchor: middle;
+  font-family: 'Fjalla One', Arial, sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.spinio .toast {
+  border-radius: 12px;
+  opacity: 0;
+  margin-left: 50%;
+}
+.spinio .toast p {
+  clear: both;
+  font-family: 'Fjalla One', Arial, sand-serif;
+  margin: 23px;
+  font-size: 15px;
+  color: #ededed;
+  letter-spacing: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: line-height 0.2s ease;
+  transition: line-height 0.2s ease;
+}
+.spinio .spinBtn {
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  background-color: #e81d62;
+  color: white;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  .spinio .toast p,
+  .spinio .toast span {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .spinio .wheelContainer {
+    width: 100%;
+    text-align: center;
+    padding: 0px !important;
+    margin: 0 !important;
+  }
+  .spinio .wheelSVG {
+    width: 400px;
+    padding: 0px;
+    margin: 0 !important;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+  .spinio .toast p,
+  .spinio .toast span {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+@media only screen and (min-width: 801px) {
+  .spinio .toast p,
+  .spinio .toast span {
+    font-size: 25px;
+    line-height: 45px;
+    text-align: center;
+  }
+}
+@media only screen and (max-height: 480px) {
+  .spinio .toast p,
+  .spinio .toast span {
+    font-size: 33px;
+    line-height: 35px;
+  }
+}
+.spinio button:focus {
+  outline: 0;
+}
+@media only screen and (max-width: 600px) {
+  .spinio .toast p,
+  .spinio .toast span {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .spinio .wheelSVG {
+    width: 300px;
+    padding: 0px;
+    margin: 0 !important;
+  }
+}
+
+/*---------popup css-----*/
+.spinio-logo{
+    /*width:300px;*/
+    max-height: 80px;
+}
+/* The Spinio Modal (background) */
+
+.wheel-wrapper {
+    text-align: center;
+}
+
+.peg, height {
+    visibility: hidden;
+}
+
+.peg {
+    margin-bottom: 50px;
+}
+
+.wheelContainer {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.centerCircle, .valueContainer, .wheelOutline, .wheelText {
+    pointer-events: none;
+}
+
+/*.toast, .wheelContainer, body, html {
+ text-align: center;
+}
+.wheelContainer, button {
+ transform: translate(-50%, 0);
+}
+.toast, button {
+ position: absolute;
+ background-color: #E81D62;
+}*/
+/*body {
+ background-color: #2d2d2d;
+ overflow: hidden;
+}
+body, html {
+ margin: 0;
+ padding: 0;
+}*/
+.wheelContainer {
+    text-align: center !important;
+    margin: auto;
+    position: relative;
+    max-width: 500px;
+}
+
+.wheelSVG {
+    position: absolute;
+    overflow: visible;
+    width: 100%;
+    margin-top: 0px;
+    height: auto; 
+}
+
+.wheelText {
+    text-anchor: middle;
+    font-family: 'Fjalla One', Arial, sans-serif;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.toast {
+    border-radius: 12px;
+    opacity: 0;
+    margin-left: 50%;
+}
+
+.toast p {
+    clear: both;
+    font-family: 'Fjalla One', Arial, sand-serif;
+    margin: 23px;
+    font-size: 15px;
+    color: #ededed;
+    letter-spacing: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*line-height: 32px;*/
+    -webkit-transition: line-height .2s ease;
+    transition: line-height .2s ease;
+}
+
+.spinBtn {
+    /*
+     left:50%;*/
+    /*width: 250px;*//*
+    top: 10px;*/
+    margin: auto;
+    text-align: center;
+    /*max-width: 400px;*/
+    padding: 10px;
+    background-color: #e81d62;
+    color: white;
+    /*font-weight: 700;*/
+    font-size: 15px;
+    /*color: #ededed;*/
+    border-radius: 6px;
+    border: none;
+    /*box-shadow: 0 2px 0 #D71559;*/
+    cursor: pointer;
+    /*font-family: "Fjalla One", Helvetica, Arial, sans-serif;*/
+}
+
+@media only screen and (max-width: 480px) {
+    .toast p, .toast span {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+    .toast p, .toast span {
+        font-size: 38px;
+        line-height: 38px;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    .toast p, .toast span {
+        font-size: 25px;
+        line-height: 45px;
+        text-align: center;
+        /*
+          margin-top:80px;*/
+    }
+}
+
+@media only screen and (max-height: 480px) {
+    .toast p, .toast span {
+        font-size: 33px;
+        line-height: 35px;
+    }
+
+    /*button {
+     font-size: 22px;
+     padding: 10px;
+     width: 40%;
+    }*/
+    /* .wheelContainer {
+      top: 70px;
+     }*/
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .toast p, .toast span {
+        font-size: 21px;
+        line-height: 21px;
+    }
+}
+
+.spinio-logo {
+    max-width: 300px;
+}
+
+.spinio-btn-wrapper {
+    position: fixed;
+    top: 50%;
+    width: 50px;
+    border-radius: 0 50% 50% 0;
+    height: 55px;
+    text-align: center;
+    padding-left: 0px;
+    border: 1px solid #dedede;
+    line-height: 4em;
+    color: #333;
+    z-index: 9999;
+    background: #dedede;
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+#spinio-btn {
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    background-image: url(../img/gift.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 5px 10px;
+    width: 100%;
+    height: 100%;
+}
+
+#spinio-btn:hover {
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes wiggle {
+    0% {
+        -webkit-transform: rotate(4deg);
+    }
+    50% {
+        -webkit-transform: rotate(-4deg);
+    }
+    100% {
+        -webkit-transform: rotate(4deg);
+    }
+}
+
+/* The Spinio Modal (background) */
+.spinio { /*display: none; !* Hidden by default *!*/
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Sit on top */
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow-x: hidden; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.spinio-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    height: auto;
+    padding-bottom: 15px;
+   /* border: 1px solid #888; */
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+#spinio-modal-content:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+    /*background-image: url('../media/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;*/
+}
+
+.spinio-title{
+    font-size: 1.8em;
+    line-height: 1.3em;
+}
+
+.hide-me {
+    animation: slide-out 0.6s;
+    -webkit-animation: slide-out 0.6s;
+    transition: all 0.6s ease;
+}
+
+/* Add Animation */
+@keyframes slide-out {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(0%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        left: -300px;
+        opacity: 0
+    }
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        left: -300px;
+        opacity: 0
+    }
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.spinio-close {
+    color: white;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.spinio-close:hover, .spinio-close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.spinio-modal-header {
+    padding: 2px 16px;
+    position: relative;
+    height: 30px;
+}
+
+.spinio-modal-body {
+    padding: 2px 16px;
+    padding-bottom: 20px !important;
+    position: relative;
+}
+
+.spinio-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.spinio-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="spinio-col-"] {
+    float: left;
+    padding: 10px;
+}
+
+.spinio-col-1 {
+    width: 8.33%;
+}
+
+.spinio-col-2 {
+    width: 16.66%;
+}
+
+.spinio-col-3 {
+    width: 25%;
+}
+
+.spinio-col-4 {
+    width: 33.33%;
+}
+
+.spinio-col-5 {
+    width: 41.66%;
+}
+
+.spinio-col-6 {
+    width: 50%;
+}
+
+.spinio-col-7 {
+    width: 58.33%;
+}
+
+.spinio-col-8 {
+    width: 66.66%;
+}
+
+.spinio-col-9 {
+    width: 75%;
+}
+
+.spinio-col-10 {
+    width: 83.33%;
+}
+
+.spinio-col-11 {
+    width: 91.66%;
+}
+
+.spinio-col-12 {
+    width: 100%;
+}
+
+.form-spinio {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    
+}
+
+.spinio-form-btn {
+    padding:10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.spinio-container {
+    margin: auto;
+    width: 80%;
+    padding: 10px 0px 50px 0px;
+}
+
+.spinio-form-wrapper {
+    padding: 0px 50px 0px 20px;
+}
+
+@media only screen and (max-width: 1050px) {
+    .spinio-col-7, .spinio-col-5 {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    .spinio-form-wrapper {
+        margin-top: 225px;
+    }
+
+    .spinio-modal-content {
+        width: 100%;
+    }
+
+    .spinio-logo {
+        margin-top: 100px;
+    }
+
+    .spinio {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .spinio-form-wrapper {
+        margin-top: 220px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .spinio-container {
+        margin: auto;
+        width: 100%;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .wheelContainer {
+        width: 100%;
+    }
+
+    .spinio-form-wrapper {
+        padding: 0px 10px 0px 10px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .spinio-form-wrapper {
+        margin-top: 5px;
+    }
+
+    .spinio-logo {
+        margin-top: 260px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .spinio-logo {
+        width: 100%;
+    }
+}
+svg:not(:root) {
+    overflow: visible !important;
+}
+/*.spinio-modal-content{
+    background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}*/
+
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+.spinio-intro{
+    min-height:320px;
+}
+.spinio-error{
+    padding: 10px;
+    min-height: 35px;
+}
+.spinio-dang{
+    border:2px solid RED;
+    color:RED;
+}
+.spinio-result{
+    display:none;
+    height: 350px;
+}
+.toast{
+    display:none;
+}
